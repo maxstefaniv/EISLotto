@@ -13,6 +13,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  position: relative;
+}
+
 .header {
   display: flex;
   padding: 2rem;
@@ -51,16 +55,25 @@ html {
   padding: 3.2rem;
   transition: all 0.35s;
   overflow: hidden;
+  /* this is for the winner*/
+  position: relative;
 }
 
 .lotto-member img {
   width: 100%;
   border-radius: 50%;
+  transition: all 0.2s ease;
 }
 
 .shine {
   transform: scale(1.2);
   box-shadow: 0 0 0.5rem 0.8rem rgba(4, 245, 24, 0.5);
+}
+.winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .participants {
