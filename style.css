@@ -43,16 +43,24 @@ html {
 }
 
 .lotto-imgs {
-  max-width: 50rem;
-  max-height: 50rem;
+  max-width: 75rem;
+  max-height: 75rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-  padding: 1.6rem;
+  gap: 2.2rem;
+  padding: 3.2rem;
+  transition: all 0.35s;
+  overflow: hidden;
 }
 
 .lotto-member img {
   width: 100%;
+  border-radius: 50%;
+}
+
+.shine {
+  transform: scale(1.2);
+  box-shadow: 0 0 0.5rem 0.8rem rgba(4, 245, 24, 0.5);
 }
 
 .participants {
