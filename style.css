@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */ /* if I set the size on the HTML then from now on 1rem => 10px*/
+
+  /* 10px/16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  padding: 2rem;
+  gap: 4.4rem;
+  background-color: red;
+}
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.lotto-main-section {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  grid-template-columns: 4fr 1fr;
+}
+
+.lotto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-color: orange;
+}
+
+.lotto-imgs {
+  max-width: 50rem;
+  max-height: 50rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.lotto-member img {
+  width: 100%;
+}
+
+.participants {
+  background-color: blue;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 3.2rem 3.2rem;
+}
