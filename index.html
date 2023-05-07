@@ -19,9 +19,11 @@
   </head>
   <body>
     <header class="header">
-      <p>IS Lotto</p>
-      <button class="team-selector" name="sncl">SNCL</button>
-      <button class="team-selector" name="core">Core</button>
+      <p class="header-name">IS Lotto</p>
+      <div>
+        <button class="btn" name="sncl">SNCL</button>
+        <button class="btn" name="core">Core</button>
+      </div>
     </header>
     <main>
       <section class="lotto-main-section container">
@@ -62,9 +64,10 @@
           </div>
           <!-- Need to show some buttons -->
           <div class="lotto-actions">
-            <button class="roll-btn" name="roll" onclick="RollForPick()">
+            <button class="btn" name="roll" onclick="RollForPick()">
               Spin! Spin! Spin!
             </button>
+            <button class="btn" name="roll" onclick="Clear()">Clear</button>
           </div>
         </div>
         <div class="participants">

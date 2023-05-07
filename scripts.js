@@ -10,17 +10,27 @@ function random(oldRandom) {
   return newRandom;
 }
 
+function Clear() {
+  const parToDelete = document.getElementById("glowwy-paragraph");
+  if (parToDelete !== null) {
+    parToDelete.remove();
+  }
+  const allImgs = document.querySelectorAll("img");
+  allImgs.forEach((i) => i.classList.remove("winner"));
+}
+
 async function RollForPick() {
   const allImgs = document.querySelectorAll("img");
+  /* removing the glowiparagraph */
+  Clear();
 
   var lastRoll;
   var previousRandom = 0;
 
-  var iterations = 3;
+  var iterations = 10;
   while (iterations > 0) {
     // dropping any previous shine
     allImgs.forEach((i) => i.classList.remove("shine"));
-    allImgs.forEach((i) => i.classList.remove("winner"));
     // getting new random
     var previousRandom = random(previousRandom);
 
@@ -38,9 +48,11 @@ async function RollForPick() {
 
   // lets display the name of the winner
   const para = document.createElement("p");
-  const node = document.createTextNode("CONGRATULATIONS potatico YOU WON");
+  para.setAttribute("id", "glowwy-paragraph");
+  const node = document.createTextNode("CONGRATULATIONS! To our winner.");
   para.appendChild(node);
   para.classList.add("winner-text");
+  para.classList.add("glow");
 
   const element = document.getElementById("lotto-id");
   element.appendChild(para);

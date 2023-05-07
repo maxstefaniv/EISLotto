@@ -20,9 +20,13 @@ body {
 
 .header {
   display: flex;
+  justify-content: space-between;
   padding: 2rem;
   gap: 4.4rem;
-  background-color: red;
+}
+.header-name {
+  font-size: 4.4rem;
+  font-weight: 600;
 }
 
 .container {
@@ -34,7 +38,7 @@ body {
 
 .lotto-main-section {
   display: grid;
-  column-gap: 6.4rem;
+  column-gap: 8.2rem;
   row-gap: 9.6rem;
   grid-template-columns: 4fr 1fr;
 }
@@ -44,7 +48,6 @@ body {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  background-color: orange;
 }
 
 .lotto-imgs {
@@ -52,7 +55,7 @@ body {
   max-height: 75rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.2rem;
+  gap: 4.4rem;
   padding: 3.2rem;
   transition: all 0.35s;
   overflow: hidden;
@@ -88,9 +91,56 @@ body {
 }
 
 .winner-text {
-  font-size: 4.4rem;
+  font-size: 6rem;
   position: absolute;
-  top: 70%;
+  top: 65%;
   max-width: 85rem;
+}
+
+.glow {
+  color: #14140f;
   text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #ff4da6, 0 0 35px #ff4da6,
+      0 0 45px #ff4da6, 0 0 55px #ff4da6, 0 0 65px #ff4da6, 0 0 75px #ff4da6;
+  }
+}
+
+/* BUTTON BULLSHIT*/
+.lotto-actions {
+  padding-top: 8rem;
+  padding-bottom: 3.2rem;
+  display: flex;
+  gap: 4.4rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: #fc3fad;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* this 2 lines are only for the form btn as it is of type button */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* transitions from current state to the one we indicate later like the shadows we apply on hover*/
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
 }
