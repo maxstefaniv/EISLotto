@@ -16,7 +16,7 @@ async function RollForPick() {
   var lastRoll;
   var previousRandom = 0;
 
-  var iterations = 10;
+  var iterations = 3;
   while (iterations > 0) {
     // dropping any previous shine
     allImgs.forEach((i) => i.classList.remove("shine"));
@@ -35,4 +35,13 @@ async function RollForPick() {
   // action definig Winner:
   lastRoll.classList.remove("shine");
   lastRoll.classList.add("winner");
+
+  // lets display the name of the winner
+  const para = document.createElement("p");
+  const node = document.createTextNode("CONGRATULATIONS potatico YOU WON");
+  para.appendChild(node);
+  para.classList.add("winner-text");
+
+  const element = document.getElementById("lotto-id");
+  element.appendChild(para);
 }
